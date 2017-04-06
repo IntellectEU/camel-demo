@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Payment xmlns="simple.payment.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Id>id002</Id>
+    <Sender>Fred</Sender>
+    <Receiver>Jon</Receiver>
+    <Amount>10</Amount>
+    <Currency>UAH</Currency>
+</Payment>

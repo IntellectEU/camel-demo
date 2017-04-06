@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!-- Exported from Transformer by admin on Apr 4, 2017 12:09:29 AM
+ Project: C:\projects\AMH\NorthenTrust\Transformer\NorthenTrust.tpj
+ MessageDefinitionGroup: Payment
+ Transformer is produced by Trace Financial Ltd. -->
+<xsd:schema targetNamespace="simple.payment.xsd"
+    elementFormDefault="qualified"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="simple.payment.xsd">
+    <!-- Message Definitions -->
+    <xsd:element name="Payment">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="Id">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:minLength value="1"/>
+                            <xsd:maxLength value="10"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="Sender" type="xsd:string"/>
+                <xsd:element name="Receiver" type="xsd:string"/>
+                <xsd:element name="Amount">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:integer">
+                            <xsd:minInclusive value="0"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="Currency">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:enumeration value="USD"/>
+                            <xsd:enumeration value="UAH"/>
+                            <xsd:enumeration value="EUR"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <!-- Named Component Definitions -->
+    <!-- Component Type Definitions -->
+</xsd:schema>
